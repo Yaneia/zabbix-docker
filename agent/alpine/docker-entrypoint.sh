@@ -146,7 +146,7 @@ prepare_zbx_agent_config() {
         update_config_var $ZBX_AGENT_CONFIG "ServerActive"
     fi
 
-    update_config_var $ZBX_AGENT_CONFIG "Hostname" "${ZBX_HOSTNAME}"
+    update_config_var $ZBX_AGENT_CONFIG "Hostname" "${ZBX_HOSTNAME}-`hostname`"
     update_config_var $ZBX_AGENT_CONFIG "HostnameItem" "${ZBX_HOSTNAMEITEM}"
     update_config_var $ZBX_AGENT_CONFIG "HostMetadata" "${ZBX_METADATA}"
     update_config_var $ZBX_AGENT_CONFIG "HostMetadataItem" "${ZBX_METADATAITEM}"
